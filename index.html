@@ -460,25 +460,25 @@
                         type="text"
                         name="comment"
                     ></textarea>
-                    <div>
+
+                    <label class="statute" for="checkbox">
                         <input
                             class="checkbox-hidden"
                             type="checkbox"
                             name="checkbox"
                             id="checkbox"
                         />
-                        <label class="statute" for="checkbox">
-                            <div class="modal-checkbox">
-                                <svg width="16" height="15">
-                                    <use href="./images/icons.svg#icon-icon-check"></use>
-                                </svg>
-                            </div>
-                            <span class="check-descr"
-                                >Oświadczam iż akceptuję <a href="#">Regulamin</a> i
-                                <a href="#">Politykę Prywatności.</a>
-                            </span>
-                        </label>
-                    </div>
+                        <div class="modal-checkbox">
+                            <svg class="svg-color" width="16" height="15">
+                                <use href="./images/icons.svg#icon-icon-check"></use>
+                            </svg>
+                        </div>
+                        <span class="check-descr"
+                            >Oświadczam iż akceptuję <a href="#">Regulamin</a> i
+                            <a href="#">Politykę Prywatności.</a>
+                        </span>
+                    </label>
+
                     <button type="submit" class="send-btn">Wyślij</button>
                 </form>
                 <button type="button" class="close-btn" data-modal-close>X</button>
