@@ -512,7 +512,7 @@ figcaption {
     display: flex;
     flex-direction: column;
     margin-top: 12px;
-    margin-left: 78px;
+    margin-left: 74px;
     line-height: 1.14;
     font-size: 14px;
     text-transform: uppercase;
@@ -523,6 +523,7 @@ figcaption {
     color: #ffffff99;
     height: 50px;
     width: 358px;
+    padding-left: 16px;
     background-color: transparent;
     font-size: 16px;
     line-height: 1.25;
@@ -733,22 +734,26 @@ figcaption {
     font-size: 12px;
     line-height: 1.172;
     font-weight: 400;
+    font-style: roboto;
     letter-spacing: 0.01em;
     height: 120px;
     appearance: none;
     font: roboto;
+    padding-top: 12px;
+    padding-left: 16px;
     margin: 0;
     resize: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .statute {
+    display: flex;
+    gap: 8px;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.714;
     letter-spacing: 0.03em;
-    margin-left: 55px;
-    margin-right: 54px;
+    margin-top: 20px;
     margin-bottom: 30px;
     color: var(--contact-item-header-color);
 }
@@ -757,7 +762,7 @@ figcaption {
 }
 
 .checkbox-hidden {
-    opacity: 0;
+    display: none;
 }
 
 .send-btn {
@@ -778,25 +783,17 @@ figcaption {
     border-radius: 4px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox-hidden:checked + .border-checkbox {
-    background-color: var(--main-color);
-    outline: none;
-    border: none;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
 
-.checkbox-hidden:checked + .border-checkbox > .modal-checkbox {
-    visibility: visible;
-}
 .modal-checkbox {
-     
-    fill: var(--nav-item-color);
+    display: flex;
+    position: relative;
+    width: 16px;
+    height: 15px;
     border-radius: 2px;
-    margin-right: 8px;
+    border: 1px solid var(--nav-item-color);
+    margin-left: 8px;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .input-box:hover,
 .input-box:focus {
@@ -819,4 +816,8 @@ figcaption {
 }
 .form-descr:hover > svg {
     fill: var(--main-color);
+}
+
+.statute:checked + .modal-checkbox {
+    
 }
