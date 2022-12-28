@@ -607,15 +607,11 @@ figcaption {
 
 .backdrop {
     position: fixed;
-    display: flex;
-    position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.2);
-    width: 100vw;
-    height: 100vh;
-    transform: scale(1);
-    transition-duration: 1s;
-    transition-timing-function: ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .close-btn {
@@ -684,10 +680,9 @@ figcaption {
 .modal-box {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding-top: 32px;
-    padding-right: 36px;
-    padding-left: 44px;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
 }
 
 .modal-box p {
@@ -722,6 +717,7 @@ figcaption {
 .input-box {
     width: 448px;
     height: 40px;
+    padding-left: 33px;
     background-color: transparent;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -729,11 +725,15 @@ figcaption {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-box:hover,
+
 .input-box:focus {
     border: 1px solid var(--main-color);
     border-radius: 4px;
     outline: none;
+    fill: var(--main-color);
+}
+
+.input-box:focus + .footer-icon {
     fill: var(--main-color);
 }
 
@@ -751,12 +751,9 @@ figcaption {
     color: var(--footer-color);
     font-size: 12px;
     line-height: 1.172;
-    font-weight: 400;
-    font-style: roboto;
     letter-spacing: 0.01em;
     height: 120px;
     appearance: none;
-    font: roboto;
     padding-top: 12px;
     padding-left: 16px;
     margin: 0;
@@ -766,6 +763,7 @@ figcaption {
 
 .statute {
     display: flex;
+    align-items: center;
     gap: 7px;
     font-size: 14px;
     line-height: 1.714;
@@ -778,6 +776,14 @@ figcaption {
 .statute a {
     color: var(--main-color);
 }
+.svg-color {
+    position: absolute;
+    opacity: 0;
+    top: -1px;
+    left: -1px;
+    
+}
+
 
 .send-btn {
     margin-bottom: 46px;
@@ -808,24 +814,11 @@ figcaption {
     margin-left: 8px;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox-hidden {
+.hidden-checkbox {
     display: none;
 }
 
-.form-descr:focus > svg {
-    fill: var(--main-color);
-}
-.form-descr:hover > svg {
-    fill: var(--main-color);
-}
 
 .hidden-checkbox:checked + .modal-checkbox > .svg-color {
     opacity: 1;
-}
-
-.svg-color {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
