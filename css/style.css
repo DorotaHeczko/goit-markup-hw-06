@@ -635,11 +635,14 @@ figcaption {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 500ms;
 }
 
 .is-hidden {
     opacity: 0;
-    visibility: hidden;
+    transition-property: visibility, opacity;
     pointer-events: none;
 }
 
@@ -725,7 +728,6 @@ figcaption {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 .input-box:focus {
     border: 1px solid var(--main-color);
     border-radius: 4px;
@@ -781,9 +783,7 @@ figcaption {
     opacity: 0;
     top: -1px;
     left: -1px;
-    
 }
-
 
 .send-btn {
     margin-bottom: 46px;
@@ -817,7 +817,6 @@ figcaption {
 .hidden-checkbox {
     display: none;
 }
-
 
 .hidden-checkbox:checked + .modal-checkbox > .svg-color {
     opacity: 1;
