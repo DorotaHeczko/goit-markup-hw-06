@@ -626,6 +626,11 @@ figcaption {
     cursor: pointer;
 }
 
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 0;
+}
+
 .modal {
     position: relative;
     margin: auto;
@@ -638,6 +643,7 @@ figcaption {
     transition-property: transform;
     transition-timing-function: ease-in-out;
     transition-duration: 500ms;
+   
 }
 
 .is-hidden {
